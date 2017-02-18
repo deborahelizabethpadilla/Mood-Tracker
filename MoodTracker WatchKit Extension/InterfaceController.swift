@@ -21,7 +21,7 @@ class InterfaceController: WKInterfaceController {
     func refreshTable() {
         
         if tableCreated == false {
-            
+         
             let reversedMoods = moods.reverse()
             
             table.setNumberOfRows(reversedMoods.count, withRowType: "tableRowController")
