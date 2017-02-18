@@ -22,19 +22,20 @@ class InterfaceController: WKInterfaceController {
         
         if tableCreated == false {
             
-        
-        table.setNumberOfRows(moods.count, withRowType: "tableRowController")
-        
-        for (index, mood) in moods.enumerated() {
+            let reversedMoods = moods.reverse()
             
-            let row = table.rowController(at: index) as! tableRowController
+            table.setNumberOfRows(reversedMoods.count, withRowType: "tableRowController")
             
-            row.tableRowLabel.setText(mood)
-            
-        }
+            for (index, mood) in moods.enumerated(reversedMoods) {
+                
+                let row = table.rowController(at: index) as! tableRowController
+                
+                row.tableRowLabel.setText(mood)
+                
+            }
             
             tableCreated = true
-    }
+        }
         
     }
     
