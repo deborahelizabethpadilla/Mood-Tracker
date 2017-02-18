@@ -10,19 +10,19 @@
     "WatchKit Simulator Actions": [
         {
             "title": "1",
-            "identifier": "mood1"
+            "identifier": "1"
         }
         
             "title": "2",
-            "identifier": "mood2"
+            "identifier": "2"
             },
             {
             "title": "3",
-            "identifier": "mood3"
+            "identifier": "3"
             ,
             {
             "title": "4",
-            "identifier": "mood4"
+            "identifier": "4"
         }
     ],
     
