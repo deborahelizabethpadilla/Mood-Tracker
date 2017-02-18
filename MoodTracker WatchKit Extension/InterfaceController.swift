@@ -16,6 +16,28 @@ class InterfaceController: WKInterfaceController {
     
     var moods = [String]()
     
+    var tableCreated = false
+    
+    func refreshTable() {
+        
+        if tableCreated == false {
+            
+        
+        table.setNumberOfRows(moods.count, withRowType: "tableRowController")
+        
+        for (index, mood) in moods.enumerated() {
+            
+            let row = table.rowController(at: index) as! tableRowController
+            
+            row.tableRowLabel.setText(mood)
+            
+        }
+            
+            tableCreated = true
+    }
+        
+    }
+    
     override func handleAction(withIdentifier identifier: String?, forRemoteNotification remoteNotification: [AnyHashable : Any]) {
         
         if let notificationIdentifier = identifier {
@@ -37,6 +59,8 @@ class InterfaceController: WKInterfaceController {
             UserDefaults.standard.set(moods, forKey: "moods")
             
             print(moods)
+            
+            refreshTable()
         }
     }
     
@@ -52,14 +76,7 @@ class InterfaceController: WKInterfaceController {
             moods.append("No Moods Saved")
         }
         
-        table.setNumberOfRows(moods.count, withRowType: "tableRowController")
-        
-        for (index, mood) in moods.enumerated() {
-            
-            let row = table.rowController(at: index) as! tableRowController
-            
-            row.tableRowLabel.setText(mood)
-        }
+        refreshTable()
         
     }
     
