@@ -18,18 +18,20 @@ class InterfaceController: WKInterfaceController {
         
         if let notificationIdentifier = identifier {
             
-            print(notificationIdentifier)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm"
+            let stringDate = dateFormatter.string(from: NSDate() as Date)
+            
+            var mood = stringDate + " - " + notificationIdentifier
+            
+            moods.append(mood)
         }
     }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
-        let stringDate = dateFormatter.string(from: NSDate() as Date)
         
-        print(stringDate)
         
     }
     
