@@ -20,6 +20,7 @@
 		50BD37971E58248600B6D546 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD37961E58248600B6D546 /* ExtensionDelegate.swift */; };
 		50BD37991E58248600B6D546 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD37981E58248600B6D546 /* NotificationController.swift */; };
 		50BD379B1E58248600B6D546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD379A1E58248600B6D546 /* Assets.xcassets */; };
+		50BD37AB1E5832DE00B6D546 /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD37AA1E5832DE00B6D546 /* tableRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		50BD37981E58248600B6D546 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		50BD379A1E58248600B6D546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BD379C1E58248600B6D546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BD37AA1E5832DE00B6D546 /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tableRowController.swift; path = "../MoodTracker WatchKit App/tableRowController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				50BD37941E58248600B6D546 /* InterfaceController.swift */,
+				50BD37AA1E5832DE00B6D546 /* tableRowController.swift */,
 				50BD37961E58248600B6D546 /* ExtensionDelegate.swift */,
 				50BD37981E58248600B6D546 /* NotificationController.swift */,
 				50BD379A1E58248600B6D546 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 				50BD37991E58248600B6D546 /* NotificationController.swift in Sources */,
 				50BD37971E58248600B6D546 /* ExtensionDelegate.swift in Sources */,
 				50BD37951E58248600B6D546 /* InterfaceController.swift in Sources */,
+				50BD37AB1E5832DE00B6D546 /* tableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
