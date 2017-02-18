@@ -57,6 +57,8 @@ class InterfaceController: WKInterfaceController {
         for (index, mood) in moods.enumerated() {
             
             let row = table.rowController(at: index) as! tableRowController
+            
+            row.tableRowLabel.setText(mood)
         }
         
     }
