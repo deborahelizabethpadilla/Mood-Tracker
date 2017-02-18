@@ -24,7 +24,17 @@ class InterfaceController: WKInterfaceController {
             
             var mood = stringDate + " - " + notificationIdentifier
             
+            if UserDefaults.standard.object(forKey: "moods") != nil {
+            
+            moods = UserDefaults.standard.object(forKey: "moods") as! [String]
+                
+            }
+            
             moods.append(mood)
+            
+            UserDefaults.standard.set(moods, forKey: "moods")
+            
+            print(moods)
         }
     }
 
