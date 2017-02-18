@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
+            "body": "What's Your Mood?",
             "title": "Optional title"
         },
         "category": "myCategory"
@@ -9,8 +9,20 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
-            "identifier": "firstButtonAction"
+            "title": "1",
+            "identifier": "mood1"
+        }
+        
+            "title": "2",
+            "identifier": "mood2"
+            },
+            {
+            "title": "3",
+            "identifier": "mood3"
+            ,
+            {
+            "title": "4",
+            "identifier": "mood4"
         }
     ],
     
