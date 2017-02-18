@@ -22,9 +22,18 @@ class InterfaceController: WKInterfaceController {
         
         if tableCreated == false {
             
-            var reversedMoods = moods.reverse()
+            var reversedMoods = moods.reversed()
+        
+        table.setNumberOfRows(reversedMoods.count, withRowType: "tableRowController")
+        
+        for (index, mood) in moods.enumerated(moods) {
             
-            table.setNumberOfRows(<#T##numberOfRows: Int##Int#>, withRowType: "tableRowController")
+            let row = table.rowController(at: index) as! tableRowController
+            
+            row.tableRowLabel.setText(mood)
+        }
+            
+            tableCreated = true
         }
         
     }
@@ -67,14 +76,7 @@ class InterfaceController: WKInterfaceController {
             moods.append("No Moods Saved")
         }
         
-        table.setNumberOfRows(moods.count, withRowType: "tableRowController")
-        
-        for (index, mood) in moods.enumerated() {
-            
-            let row = table.rowController(at: index) as! tableRowController
-            
-            row.tableRowLabel.setText(mood)
-        }
+        refreshTable()
         
     }
     
