@@ -27,6 +27,9 @@ class InterfaceController: WKInterfaceController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm"
+        let stringDate = dateFormatter.string(from: NSDate() as Date)
+        
+        print(stringDate)
         
     }
     
