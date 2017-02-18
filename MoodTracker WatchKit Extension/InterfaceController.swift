@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet var table: WKInterfaceTable!
+    
     var moods = [String]()
     
     override func handleAction(withIdentifier identifier: String?, forRemoteNotification remoteNotification: [AnyHashable : Any]) {
@@ -25,8 +27,8 @@ class InterfaceController: WKInterfaceController {
             var mood = stringDate + " - " + notificationIdentifier
             
             if UserDefaults.standard.object(forKey: "moods") != nil {
-            
-            moods = UserDefaults.standard.object(forKey: "moods") as! [String]
+                
+                moods = UserDefaults.standard.object(forKey: "moods") as! [String]
                 
             }
             
@@ -37,11 +39,25 @@ class InterfaceController: WKInterfaceController {
             print(moods)
         }
     }
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        if UserDefaults.standard.object(forKey: "moods") != nil {
+            
+            moods = UserDefaults.standard.object(forKey: "moods") as! [String]
+            
+        } else {
+            
+            moods.append("No Moods Saved")
+        }
         
+        table.setNumberOfRows(moods.count, withRowType: "tableRowController")
+        
+        for (index, mood) in moods.enumerated() {
+            
+            let row = table.rowController(at: index) as! tableRowController
+        }
         
     }
     
@@ -54,5 +70,5 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }
